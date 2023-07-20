@@ -54,12 +54,15 @@ pipeline {
     post {
         always {
             // This will be always executed, no matter if the steps avobe failed or not
+            echo "always executed"
         }
         success {
             // Run if it succeeds
+            echo "only executed on success"
         }
         failure {
             // Run if it fails
+            echo "only executed on failure"
         }
     }
 }
